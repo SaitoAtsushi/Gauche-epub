@@ -125,14 +125,16 @@
   (let-optionals* rest
       ((title "")
        (author #f)
-       (description #f))
+       (description #f)
+       (page-dir #f))
     (rlet1 book
         (make <book>
           :id id
           :title title
           :author author
           :filename filename
-          :description description))))
+          :description description
+          :page-progression-direction page-dir))))
 
 (define (book? x)
   (is-a? x <book>))
